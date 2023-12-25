@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>user</title>
+
+  <script defer src="/javascripts/user.js"></script>
+</head>
+<body>
+  <h1>你好，<%= user.name %></h1>
+  <form action="/auth/logout" method="POST"><button>登出</button></form>
+  <h1>計算機</h1>
+  <form id="calculate-form" action="/users/calculate" method="POST">
+    <span>a</span>
+    <input type="text" name="a" style="width: 80px;">
+    <span>b</span>
+    <input type="text" name="b" style="width: 80px;">
+    <button type="button" id="add-btn">加法</button>
+    <button type="button" id="multiply-btn">乘法</button>
+    <input type="hidden" name="mathType" id="mathType">
+  </form>
+
+  <h1 id="reslult"><%= result %></h1>
+  <a href="/">回首頁</a>
+</body>
+</html>
